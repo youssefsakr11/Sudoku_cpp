@@ -1,90 +1,114 @@
-# 🧩 Sudoku Game – Best Project Award Winner 🏆
+# 🧩 Sudoku Game
 
-A complete, playable Sudoku game built in **C++/CLI** with **Windows Forms**, featuring multiple difficulty levels, a heart-based mistake system, and a full solution viewer.
 
-This project was developed as part of an academic course at **Misr International University** and won **🏅 Best Project** recognition.
+## 📌 Overview
 
----
-
-## 🎯 Project Highlights
-
-- ✅ Fully graphical Sudoku game (Windows Forms)
-- ✅ Three difficulty levels: **Easy**, **Medium**, **Hard**
-- ✅ **Heart system** – 3 lives per game
-- ✅ Mistake tracking with immediate feedback
-- ✅ **Show Solution** button
-- ✅ Progressive difficulty – beat Easy → unlock Medium → unlock Hard
-- ✅ Reset game at any time
-- ✅ Clean, color-coded 9×9 grid with 3×3 subgrid shading
+This project is a **Sudoku desktop game** built using **C++/CLI** and **.NET Windows Forms**.
+It demonstrates object-based programming, GUI development, and basic algorithm implementation.
 
 ---
 
-## 🛠️ Technologies Used
+## 🎯 Features
 
-| Category       | Technologies                          |
-|----------------|----------------------------------------|
-| Language       | C++ / CLI (managed C++)                |
-| UI Framework   | Windows Forms (.NET)                   |
-| Backend Logic  | Custom Sudoku solver & generator       |
-| Data Structures| Custom `HashMap` for player moves      |
+* 🎮 3 Difficulty Levels (Easy, Medium, Hard)
+* ❤️ 3 Hearts system (lose one on wrong move)
+* 🔓 Progressive difficulty unlocking
+* 🔍 Solution viewer window
+* 🎨 Clean 9×9 grid with styled sections
+* 🔄 Reset game anytime
 
 ---
 
-## 🧠 Key Features Explained
+## 🧠 Concepts Used
 
-### 🎮 Game Flow
+* Object-Based Design
+The application is structured around classes (e.g., Sudoku, UI handlers), promoting modularity, code organization, and reusability.
 
-1. **Welcome Screen** → Press Play
-2. **Difficulty Selection** → Easy / Medium / Hard
-3. **Game Grid** → Fill in numbers using the number pad
-4. **Mistakes** → Wrong moves cost 1 heart (max 3 hearts)
-5. **Victory / Game Over** → Option to continue or restart
+*Event-Driven Programming
+User interactions (button clicks, cell selection) trigger events that control game behavior, making the application responsive and interactive.
 
-### 🔁 Difficulty Progression
+* Recursive Backtracking Algorithm
+Used to solve and validate the Sudoku grid. This approach systematically tries possible values and backtracks when constraints are violated.
 
-| Difficulty | Pre-filled Cells | Unlocks next? |
-|------------|------------------|----------------|
-| Easy       | ~35 cells         | Yes → Medium   |
-| Medium     | ~25 cells         | Yes → Hard     |
-| Hard       | ~20 cells         | No (win again) |
+* State Management
+The game tracks user progress, including filled cells, remaining lives (hearts), and current difficulty level.
 
-### ❤️ Heart System
+*Custom Data Handling
+A simple custom structure (e.g., a HashMap-like approach) is used to store and manage user inputs efficiently.
 
-- Starts with **3 hearts**
-- Each incorrect number placement → **-1 heart**
-- At 0 hearts → **Game Over** with restart option
+*GUI Logic Separation
+Separation between game logic and UI improves maintainability and makes the code easier to extend or debug.
 
-### 🔍 Show Solution
+---
 
-- Opens a separate window with the **full solved Sudoku grid**
-- Read-only view – does not affect active game
+## 🎮 How to Play
+
+1. Run the application
+2. Choose difficulty
+3. Select a cell
+4. Enter a number (1–9)
+
+* ✅ Correct → stays
+* ❌ Wrong → lose a heart
+
+Win by completing the grid.
+Lose when hearts reach 0.
+
+---
+
+## 🛠️ Technologies
+
+*C++/CLI (Managed C++)
+
+Used to implement the core application logic while leveraging .NET libraries. It allows seamless interaction between native C++ code and the managed runtime.
+
+
+*.NET Windows Forms
+
+Provides the graphical user interface (GUI), including event-driven components such as buttons, grids, and forms for user interaction.
+
+
+*Visual Studio
+
+Used as the development environment for building, debugging, and managing the project.
+
+---
+
+## 🚀 How to Run
+
+### Requirements
+
+* Windows OS
+* Visual Studio (with C++ and .NET workloads)
+
+### Steps
+
+1. Clone the repository
+2. Open project in Visual Studio
+3. Build (Ctrl + Shift + B)
+4. Run (F5)
 
 ---
 
 ## 📁 Project Structure
-📦 SudokuGame/
-├── 📄 MyForm.cpp # Entry point (main)
-├── 📄 MyForm.h # Welcome screen
-├── 📄 D.h # Difficulty selection window
-├── 📄 G.h # Main game grid & logic
-├── 📄 Sudoku.h # Sudoku class + HashMap
-├── 📄 Sudoku.cpp # Puzzle generation & solving
-├── 📄 SolutionForm.h # Solution viewer window
-└── 📄 Project_Sudoku.vcxproj # Visual Studio project file
 
-## 🚀 How to Run
+Sudoku-Game/
+│
+├── MyForm.cpp
+├── MyForm.h
+├── D.h
+├── G.h
+├── Sudoku.cpp
+├── Sudoku.h
+├── SolutionForm.h
+└── Project files
 
-### Prerequisites
+---
 
-- **Visual Studio** (2019 or 2022) with:
-  - Desktop development with C++
-  - .NET desktop development workload
-- Windows OS
 
-### Steps
+## 📜 License
 
-1. Open `Project_Sudoku.vcxproj` in Visual Studio
-2. Build the solution (Ctrl+Shift+B)
-3. Run (F5)
+MIT License
 
-> ⚠️ This project uses **C++/CLI** and Windows Forms – Windows only.
+---
+

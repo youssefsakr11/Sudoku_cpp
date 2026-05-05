@@ -101,13 +101,21 @@ Used as the development environment for building, debugging, and managing the pr
 Sudoku-Game/
 │
 ├── MyForm.cpp
+
 ├── MyForm.h
+
 ├── D.h
+
 ├── G.h
+
 ├── Sudoku.cpp
+
 ├── Sudoku.h
+
 ├── SolutionForm.h
+
 └── Project files
+
 
 ---
 

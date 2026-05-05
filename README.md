@@ -24,7 +24,7 @@ It demonstrates object-based programming, GUI development, and basic algorithm i
 * Object-Based Design
 The application is structured around classes (e.g., Sudoku, UI handlers), promoting modularity, code organization, and reusability.
 
-*Event-Driven Programming
+* Event-Driven Programming
 User interactions (button clicks, cell selection) trigger events that control game behavior, making the application responsive and interactive.
 
 * Recursive Backtracking Algorithm
@@ -33,10 +33,10 @@ Used to solve and validate the Sudoku grid. This approach systematically tries p
 * State Management
 The game tracks user progress, including filled cells, remaining lives (hearts), and current difficulty level.
 
-*Custom Data Handling
+* Custom Data Handling
 A simple custom structure (e.g., a HashMap-like approach) is used to store and manage user inputs efficiently.
 
-*GUI Logic Separation
+* GUI Logic Separation
 Separation between game logic and UI improves maintainability and makes the code easier to extend or debug.
 
 ---
@@ -58,17 +58,17 @@ Lose when hearts reach 0.
 
 ## 🛠️ Technologies
 
-*C++/CLI (Managed C++)
+* C++/CLI (Managed C++)
 
 Used to implement the core application logic while leveraging .NET libraries. It allows seamless interaction between native C++ code and the managed runtime.
 
 
-*.NET Windows Forms
+* .NET Windows Forms
 
 Provides the graphical user interface (GUI), including event-driven components such as buttons, grids, and forms for user interaction.
 
 
-*Visual Studio
+* Visual Studio
 
 Used as the development environment for building, debugging, and managing the project.
 
